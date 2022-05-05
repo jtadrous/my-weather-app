@@ -90,8 +90,15 @@
             >
               <h2 class="pl-4 pt-2">Wind Speed</h2>
               <div class="text-center">
+                <!-- <div class="triangle-top float-left ma-4">
+                  <div class="inner-triangle"><p>hello</p></div>
+                </div> -->
                 <div class="triangle-top float-left ma-4">
-                  <div class="inner-triangle"></div>
+                  <img
+                    src="../assets/triangle-outline.png"
+                    alt="Simple triangle outline"
+                  />
+                  <p>hello</p>
                 </div>
                 <p id="wSpeed">
                   {{ weatherData.wind_speed }} <br />
@@ -224,13 +231,31 @@ export default {
 @import "~vuetify/src/styles/settings/_variables";
 
 .home {
-  .triangle-top {
+  /* .triangle-top {
     display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 60px 120px 60px;
     border-color: transparent transparent #d39558 transparent;
+  } */
+
+  .triangle-top {
+    width: 50%;
+    img {
+      width: 90%;
+      filter: invert(67%) sepia(48%) saturate(458%) hue-rotate(347deg)
+        brightness(85%) contrast(92%);
+    }
+
+    p {
+      position: absolute;
+      background-color: aqua;
+      z-index: 3;
+      //top: 0;
+      //margin-top: -40px;
+      align-content: center;
+    }
   }
 
   .inner-triangle {
